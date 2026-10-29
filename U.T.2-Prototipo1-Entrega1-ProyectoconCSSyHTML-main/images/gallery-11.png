@@ -1,0 +1,218 @@
+=========================================
+ 1. ESTRUCTURA SEMÁNTICA BASE (HTML)
+=========================================
+<!-- Pegar en el body -->
+
+<!-- HEADER: El encabezado principal con el menú de navegación -->
+<header class="main-header">
+    <nav class="main-nav">
+        <ul class="nav-list">
+            <!-- Los href="#..." hacen que al hacer clic la página baje sola hasta el section con ese mismo id -->
+            <li><a href="#section-1">Inicio</a></li>
+            <li><a href="#section-2">Galería</a></li>
+            <li><a href="#section-3">Datos</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- MAIN: Es la caja principal que envuelve TODO el contenido de tu web. Solo puede haber un <main> por página -->
+<main class="main-content">
+    
+    <!-- 
+    ¿QUÉ ES UN <section>? 
+    Es un bloque temático de tu página. Imagina que tu web es un libro; cada <section> es un capítulo. 
+    El profesor pide 3 secciones que ocupen bastante (el largo de 3 pantallas). 
+    Siempre debes ponerle un id para enlazarlo con el menú de arriba y un título (<h2>).
+    -->
+
+    <!-- SECCIÓN 1: TEXTO DE INTRODUCCIÓN -->
+    <section id="section-1" class="text-section">
+        <h2>¿De qué trata esta página?</h2>
+        <!-- La etiqueta <article> se usa para contenido que tiene sentido por sí mismo, como un post o una noticia -->
+        <article class="info-article">
+            <h3>Nuestra historia</h3>
+            <p>Aquí debes escribir un buen bloque de texto hablando sobre tu tema de inspiración. Escribe bastante para que la página sea larga y ocupe espacio hacia abajo (scroll).</p>
+        </article>
+        
+        <article class="info-article">
+            <h3>Nuestros objetivos</h3>
+            <p>Puedes poner otro párrafo aquí. Cuanto más texto e información pongas, más se alarga la página para cumplir la rúbrica.</p>
+        </article>
+    </section>
+
+    <!-- SECCIÓN 2: GALERÍA DE IMÁGENES -->
+    <!-- Aquí pegarás el código de la galería del APARTADO 3 de la chuleta -->
+    <section id="section-2" class="gallery-section">
+        <h2>Galería del Proyecto</h2>
+        <!-- ... imágenes aquí ... -->
+    </section>
+
+    <!-- SECCIÓN 3: LA TABLA DE DATOS -->
+    <!-- Aquí pegarás el código de la tabla del APARTADO 2 de la chuleta -->
+    <section id="section-3" class="table-section">
+        <h2>Datos Importantes</h2>
+        <!-- ... tabla aquí ... -->
+    </section>
+
+</main>
+
+<!-- FOOTER: El pie de página. Va abajo del todo, fuera del <main> -->
+<footer class="main-footer">
+    <p>Proyecto Final - Lenguajes de Marcas - 2026</p>
+</footer>
+
+-----------------------------------------
+ 2. TABLA COMPLETA CON ESTILOS (HTML + CSS)
+-----------------------------------------
+<!-- HTML DE LA TABLA -->
+<section id="section-3" class="table-section">
+    <table class="info-table">
+        <thead class="table-head">
+            <tr>
+                <th>Característica</th>
+                <th>Descripción</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody class="table-body">
+            <tr class="table-row">
+                <td>Dato 1</td>
+                <td>Detalle del dato 1</td>
+                <td>100</td>
+            </tr>
+            <tr class="table-row">
+                <td>Dato 2</td>
+                <td>Detalle del dato 2</td>
+                <td>200</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+/* CSS DE LA TABLA (Con hover effect) */
+.table-section {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.info-table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.info-table th, .info-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-head tr {
+    background-color: #009879;
+    color: #ffffff;
+}
+
+.table-row:hover {
+    background-color: #f5f5f5; /* Efecto hover pedido en rúbrica */
+    transform: scale(1.01);
+    transition: all 0.3s ease;
+}
+
+
+-----------------------------------------
+ 3. GALERÍA RESPONSIVE (HTML + CSS)
+-----------------------------------------
+<!-- HTML DE LA GALERÍA -->
+<section id="section-2" class="gallery-section">
+    <article class="gallery-card">
+        <img src="images/gallery-01.png" alt="Imagen 1" class="gallery-img">
+    </article>
+    <article class="gallery-card">
+        <img src="images/gallery-02.png" alt="Imagen 2" class="gallery-img">
+    </article>
+    <!-- Repetir hasta gallery-10.png -->
+</section>
+
+/* CSS DE LA GALERÍA (Flexbox + Media Queries) */
+.gallery-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.gallery-card {
+    width: 100%; /* Por defecto móvil */
+}
+
+.gallery-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.gallery-img:hover {
+    opacity: 0.8; /* Efecto hover para la rúbrica */
+    cursor: pointer;
+}
+
+/* Tablet (2 columnas) */
+@media (min-width: 768px) {
+    .gallery-card {
+        width: calc(50% - 15px);
+    }
+}
+
+/* Escritorio (3 columnas o más) */
+@media (min-width: 1024px) {
+    .gallery-card {
+        width: calc(33.333% - 15px);
+    }
+}
+
+
+-----------------------------------------
+ 4. HEADER Y FOOTER RESPONSIVE (CSS)
+-----------------------------------------
+/* HEADER */
+.main-header {
+    background-color: #333;
+    padding: 15px;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column; /* Móvil: en vertical */
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+}
+
+@media (min-width: 768px) {
+    .nav-list {
+        flex-direction: row; /* Tablet/PC: en horizontal */
+        justify-content: center;
+    }
+}
+
+/* FOOTER */
+.main-footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Balatro: guía de fans</title>
+    <!-- Inspiration: PUT-THE-DRIBBBLE-LINK-HERE (from https://dribbble.com/tags/web) -->
+    <!-- Icons library: Font Awesome (only allowed library) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Page header with main navigation -->
+    <header class="site-header" id="home">
+        <nav class="main-nav">
+            <a class="brand" href="#home"><i class="fa-solid fa-diamond"></i> Balatro</a>
+            <ul class="nav-list" id="menu">
+                <li class="close-item"><a href="#home"><i class="fa-solid fa-xmark"></i> Cerrar</a></li>
+                <li><a href="#about">El juego</a></li>
+                <li><a href="#combo">Combo</a></li>
+                <li><a href="#gallery">Galería</a></li>
+                <li><a href="#reviews">Reseñas</a></li>
+                <li><a href="#social">Redes</a></li>
+            </ul>
+            <div class="nav-action">
+                <a class="sign-in-button" href="https://discord.com/invite/balatro" target="_blank" rel="noopener"><i
+                        class="fa-brands fa-discord"></i><span class="sign-in-text">Unirse</span></a>
+            </div>
+            <a class="menu-button" href="#menu" aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></a>
+        </nav>
+        <div class="hero">
+            <img class="hero-card" src="images/joker-card.png" alt="Carta del Joker de Balatro" width="260"
+                height="360">
+            <div class="hero-text">
+                <h1>Balatro</h1>
+                <p>El póker que se rompe a propósito. Arma tu mazo, encuentra el Joker perfecto y haz que los
+                    números se disparen.</p>
+                <a class="button" href="#about">Descubre el juego</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section: what the game is about -->
+        <section class="page-section" id="about">
+            <h2>Qué es Balatro</h2>
+            <div class="about-layout">
+                <article class="about-text">
+                    <p>Balatro es un juego de cartas que mezcla el póker con los roguelike. Recibes ocho cartas, eliges
+                        hasta cinco y formas una mano: cada mano suma fichas y se multiplica por un valor.</p>
+                    <p>Superar las apuestas ciegas te da dinero para comprar Jokers, cartas de tarot y mejoras. Los
+                        Jokers cambian las reglas, y de sus combinaciones salen las partidas más locas.</p>
+                    <p>Lo creó un solo desarrollador, LocalThunk, y lo publica Playstack.</p>
+                </article>
+                <aside class="fun-fact">
+                    <i class="fa-solid fa-hat-wizard"></i>
+                    <h3>Dato curioso</h3>
+                    <p>«Balatro» es la palabra latina para un bufón de corte.</p>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Section: powerful combo with YouTube video -->
+        <section class="page-section section-dark" id="combo">
+            <h2>Un combo poderoso</h2>
+            <div class="combo-layout">
+                <article class="combo-text">
+                    <h3>Baron + Mime + Reyes en mano</h3>
+                    <p>Baron multiplica por 1,5 el multiplicador por cada Rey que aún tengas en la mano. Mime repite
+                        esos efectos de las cartas retenidas, así que cada Rey cuenta dos veces.</p>
+                    <p>Si además potencias tus Reyes con Cartas de Acero, la puntuación crece sin freno.</p>
+                    <a class="button" href="https://www.youtube.com/results?search_query=balatro+baron+mime+combo"
+                        target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i> Más combos en YouTube</a>
+                </article>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID" title="Vídeo de un combo de Balatro"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: image gallery (10 different images) -->
+        <section class="page-section" id="gallery">
+            <h2>Galería</h2>
+            <ul class="gallery">
+                <li><img src="images/gallery-01.png" alt="Captura 1 de Balatro" width="400" height="300"></li>
+                <li><img src="images/gallery-02.png" alt="Captura 2 de Balatro" width="400" height="300"></li>
+                <li><img src="images/gallery-03.png" alt="Captura 3 de Balatro" width="400" height="300"></li>
+                <li><img src="images/gallery-04.png" alt="Captura 4 de Balatro" width="400" height="300"></li>
+                <li><img src="images/gallery-05.png" alt="Captura 5 de Balatro" width="400" height="300"></li>
+                <li><img src="images/gallery-06.png" alt="Captura 6 de Balatro" width="400" height="300"></li>
+                <li><img src="images/gallery-07.png" alt="Captura 7 de Balatro" width="400" height="300"></li>
+                <li><img src="images/gallery-08.png" alt="Captura 8 de Balatro" width="400" height="300"></li>
+                <li><img src="images/gallery-09.png" alt="Captura 9 de Balatro" width="400" height="300"></li>
+                <li><img src="images/gallery-10.png" alt="Captura 10 de Balatro" width="400" height="300"></li>
+            </ul>
+        </section>
+
+        <!-- Section: fake reviews -->
+        <section class="page-section section-dark" id="reviews">
+            <h2>Lo que dicen los jugadores</h2>
+            <div class="reviews">
+                <article class="review-card">
+                    <h3>«Solo una partida más»</h3>
+                    <p>Dije eso a las diez de la noche. Ahora amanece y mi Joker multiplica por mil.</p>
+                    <p class="review-author">Marta, 5 de 5 estrellas</p>
+                </article>
+                <article class="review-card">
+                    <h3>«Mi mazo es un caos precioso»</h3>
+                    <p>Empecé queriendo una escalera de color y terminé con trece Reyes en la mano. Sin remordimientos.
+                    </p>
+                    <p class="review-author">Dani, 5 de 5 estrellas</p>
+                </article>
+                <article class="review-card">
+                    <h3>«No sé jugar al póker»</h3>
+                    <p>Tampoco hace falta. A las dos horas ya hablaba de fichas, multiplicadores y sinergias.</p>
+                    <p class="review-author">Lucía, 4 de 5 estrellas</p>
+                </article>
+            </div>
+            <p class="disclaimer">Reseñas inventadas para este proyecto de clase.</p>
+        </section>
+    </main>
+
+    <!-- Page footer with social links -->
+    <footer class="site-footer" id="social">
+        <div class="footer-block">
+            <h2>Síguelo en redes</h2>
+            <ul class="social-list">
+                <li><a href="https://x.com/BalatroGame" target="_blank" rel="noopener" aria-label="X de Balatro"><i
+                            class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="https://discord.com/invite/balatro" target="_blank" rel="noopener"
+                        aria-label="Discord de Balatro"><i class="fa-brands fa-discord"></i></a></li>
+                <li><a href="https://www.playbalatro.com/" target="_blank" rel="noopener"
+                        aria-label="Web oficial de Balatro"><i class="fa-solid fa-globe"></i></a></li>
+            </ul>
+        </div>
+        <p class="legal">Web de fans sin ánimo de lucro. Balatro pertenece a LocalThunk y Playstack.</p>
+    </footer>
+</body>
+
+</html>
